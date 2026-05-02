@@ -1,0 +1,25 @@
+name: TierPvP
+version: '1.0.0'
+main: xyz.bugsum.tierpvp.TierPvP
+api-version: '1.21'
+prefix: TierPvP
+authors: [ Samarth Sharma ]
+description: A fast-paced minigame plugin
+
+commands:
+  tierpvp:
+    description: TierPvP main command
+    usage: /tierpvp <subcommand>
+    aliases:
+      - tpvp
+
+permissions:
+  tierpvp.use:
+    default: true
+    description: Basic TierPvP access
+  tierpvp.admin:
+    default: op
+    description: TierPvP admin commands
+  tierpvp.stats:
+    default: true
+    description: View TierPvP stats
