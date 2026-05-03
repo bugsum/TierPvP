@@ -1,0 +1,103 @@
+# ============================================
+#          TierPvP - Main Configuration
+# ============================================
+
+# Game settings
+game:
+  # Game mode: FFA (Free-For-All) or TEAMS
+  mode: FFA
+  # Whether victims lose a level on death
+  demotion-on-death: true
+  # Minimum level a player can be demoted to
+  demotion-min-level: 1
+  # Whether dying to water/void also demotes the player
+  environment-death-demotes: true
+  # Seconds a combat tag lasts after hitting or being hit
+  # While tagged, spawn zone protection is disabled
+  combat-tag-seconds: 10
+  # Seconds of celebration after someone wins before arena rotation
+  celebration-seconds: 5
+  # If spawn protection must be enabled
+  spawn-protection: true
+  # Whether touching water blocks instantly kills players
+  water-kills: true
+
+# Team mode settings
+# NOTE: only applies when game.mode is TEAMS
+teams:
+  # Number of teams
+  count: 2
+  # Whether teammates can damage each other
+  friendly-fire: false
+  # Auto-assign players to the smallest team on join
+  balance-on-join: true
+
+# Display settings
+display:
+  # Show a title on screen when leveling up (can be distracting during PvP)
+  level-up-title: true
+  # Enable the built-in sidebar scoreboard
+  # Set to false if you use an external plugin like TAB
+  scoreboard-enabled: true
+  # Broadcast a kill streak message every N kills (0 to disable)
+  kill-streak-broadcast: 5
+
+# General settings
+settings:
+  # Language file to use from plugins/TierPvP/messages/<lang>.yml
+  language: en
+  # Automatically add players to the game when they join the server
+  auto-join-on-connect: true
+
+# EXPERIMENTAL May not work.
+#
+# Anti-teaming detection (FFA mode only)
+# Detects players who stay near each other without fighting (may give false positives)
+anti-teaming:
+  enabled: false
+  # Radius in blocks to check for nearby players
+  detection-radius: 5
+  # Seconds two players must be near each other to trigger
+  detection-time-seconds: 30
+  # Punishment: DAMAGE, DEMOTE, or KICK
+  punishment: DAMAGE
+
+# ============================================
+#       Sidebar Scoreboard Configuration
+# ============================================
+# Fully customizable - change title, add/remove/reorder lines
+# All lines support MiniMessage formatting (<gold>, <bold>, <gradient:...>, etc.)
+#
+# Available placeholders:
+#   <level>         - Player's current level
+#   <level_max>     - Maximum level in the chain
+#   <weapon>        - Current weapon display name
+#   <kills>         - Kills in current game
+#   <deaths>        - Deaths in current game
+#   <killstreak>    - Current consecutive kill streak
+#   <arena>         - Current arena name
+#   <players>       - Total players in game
+#   <player>        - The viewing player's name
+#   <top_1_name>    - #1 ranked player name
+#   <top_1_level>   - #1 ranked player level
+#   <top_2_name>    - #2 ranked player name
+#   <top_2_level>   - #2 ranked player level
+#   <top_3_name>    - #3 ranked player name
+#   <top_3_level>   - #3 ranked player level
+scoreboard:
+  title: "<gold><bold>★ TierPvP ★"
+  lines:
+    - ""
+    - "<gray>Level: <gold><level>"
+    - "<gray>Weapon: <white><weapon>"
+    - " "
+    - "<gray>Kills: <green><kills>"
+    - "<gray>Deaths: <red><deaths>"
+    - "<gray>Streak: <yellow><killstreak>"
+    - "  "
+    - "<yellow>#1 <top_1_name> <gray>Lv. <top_1_level>"
+    - "<yellow>#2 <top_2_name> <gray>Lv. <top_2_level>"
+    - "<yellow>#3 <top_3_name> <gray>Lv. <top_3_level>"
+    - "   "
+    - "<gray>Arena: <aqua><arena>"
+    - "<gray>Players: <white><players>"

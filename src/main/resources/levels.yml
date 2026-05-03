@@ -1,0 +1,310 @@
+# TierPvP - Level Configuration
+# Define the weapon/armor progression chain.
+# Players start at level 1 and advance on each kill.
+# The LAST level is the final level — getting a kill here wins the game.
+#
+# Each level supports:
+#   display-name    - MiniMessage formatted name shown in chat/scoreboard
+#   weapon          - The weapon given to the player
+#   extras          - Additional items (e.g., arrows for bows)
+#   armor           - Armor pieces (helmet, chestplate, leggings, boots)
+#
+# Item options (weapon, extras, armor pieces):
+#   material        - Bukkit material name (e.g., DIAMOND_SWORD)
+#   slot            - Inventory slot (0-8 for hotbar, 9+ for inventory)
+#   amount          - Stack size (default: 1)
+#   name            - Custom display name (MiniMessage format)
+#   lore            - List of lore lines (MiniMessage format)
+#   enchantments    - Map of enchantment_name: level (use lowercase names)
+#                     Examples: sharpness, protection, power, quick_charge
+#   item-flags      - List of ItemFlag names to hide info
+#                     Examples: HIDE_ENCHANTS, HIDE_ATTRIBUTES, HIDE_UNBREAKABLE
+#
+# Armor pieces are optional — omit any piece the player shouldn't have.
+
+levels:
+  1:
+    display-name: "<gray>Wooden Axe"
+    weapon:
+      material: WOODEN_AXE
+      slot: 0
+    extras: []
+    armor: {}
+  2:
+    display-name: "<white>Wooden Sword"
+    weapon:
+      material: WOODEN_SWORD
+      slot: 0
+    extras: []
+    armor: {}
+  3:
+    display-name: "<yellow>Stone Sword"
+    weapon:
+      material: STONE_SWORD
+      slot: 0
+    extras: []
+    armor:
+      helmet:
+        material: LEATHER_HELMET
+  4:
+    display-name: "<yellow>Stone Sword II"
+    weapon:
+      material: STONE_SWORD
+      slot: 0
+    extras: []
+    armor:
+      helmet:
+        material: LEATHER_HELMET
+      chestplate:
+        material: LEATHER_CHESTPLATE
+  5:
+    display-name: "<yellow>Stone Sword III"
+    weapon:
+      material: STONE_SWORD
+      slot: 0
+    extras: []
+    armor:
+      helmet:
+        material: LEATHER_HELMET
+      chestplate:
+        material: LEATHER_CHESTPLATE
+      leggings:
+        material: LEATHER_LEGGINGS
+  6:
+    display-name: "<gold>Stone Sword IV"
+    weapon:
+      material: STONE_SWORD
+      slot: 0
+    extras: []
+    armor:
+      helmet:
+        material: LEATHER_HELMET
+      chestplate:
+        material: LEATHER_CHESTPLATE
+      leggings:
+        material: LEATHER_LEGGINGS
+      boots:
+        material: LEATHER_BOOTS
+  7:
+    display-name: "<white>Iron Sword"
+    weapon:
+      material: IRON_SWORD
+      slot: 0
+    extras: []
+    armor:
+      helmet:
+        material: IRON_HELMET
+      chestplate:
+        material: IRON_CHESTPLATE
+      leggings:
+        material: IRON_LEGGINGS
+      boots:
+        material: IRON_BOOTS
+  8:
+    # Enchanted iron gear
+    display-name: "<white>Iron Sword+"
+    weapon:
+      material: IRON_SWORD
+      slot: 0
+      enchantments:
+        sharpness: 1
+    extras: []
+    armor:
+      helmet:
+        material: IRON_HELMET
+        enchantments:
+          protection: 1
+      chestplate:
+        material: IRON_CHESTPLATE
+        enchantments:
+          protection: 1
+      leggings:
+        material: IRON_LEGGINGS
+        enchantments:
+          protection: 1
+      boots:
+        material: IRON_BOOTS
+        enchantments:
+          protection: 1
+  9:
+    display-name: "<aqua>Diamond Sword"
+    weapon:
+      material: DIAMOND_SWORD
+      slot: 0
+    extras: []
+    armor:
+      helmet:
+        material: DIAMOND_HELMET
+      chestplate:
+        material: DIAMOND_CHESTPLATE
+      leggings:
+        material: DIAMOND_LEGGINGS
+      boots:
+        material: DIAMOND_BOOTS
+  10:
+    # Enchanted diamond gear
+    display-name: "<aqua>Diamond Sword+"
+    weapon:
+      material: DIAMOND_SWORD
+      slot: 0
+      enchantments:
+        sharpness: 2
+    extras: []
+    armor:
+      helmet:
+        material: DIAMOND_HELMET
+        enchantments:
+          protection: 2
+      chestplate:
+        material: DIAMOND_CHESTPLATE
+        enchantments:
+          protection: 2
+      leggings:
+        material: DIAMOND_LEGGINGS
+        enchantments:
+          protection: 2
+      boots:
+        material: DIAMOND_BOOTS
+        enchantments:
+          protection: 2
+  11:
+    # Ranged level — extras provide arrows
+    display-name: "<green>Bow"
+    weapon:
+      material: BOW
+      slot: 0
+      enchantments:
+        power: 2
+    extras:
+      - material: ARROW
+        amount: 32
+        slot: 9
+    armor:
+      helmet:
+        material: DIAMOND_HELMET
+        enchantments:
+          protection: 2
+      chestplate:
+        material: DIAMOND_CHESTPLATE
+        enchantments:
+          protection: 2
+      leggings:
+        material: DIAMOND_LEGGINGS
+        enchantments:
+          protection: 2
+      boots:
+        material: DIAMOND_BOOTS
+        enchantments:
+          protection: 2
+  12:
+    display-name: "<green>Crossbow"
+    weapon:
+      material: CROSSBOW
+      slot: 0
+      enchantments:
+        quick_charge: 2
+    extras:
+      - material: ARROW
+        amount: 32
+        slot: 9
+    armor:
+      helmet:
+        material: DIAMOND_HELMET
+        enchantments:
+          protection: 2
+      chestplate:
+        material: DIAMOND_CHESTPLATE
+        enchantments:
+          protection: 2
+      leggings:
+        material: DIAMOND_LEGGINGS
+        enchantments:
+          protection: 2
+      boots:
+        material: DIAMOND_BOOTS
+        enchantments:
+          protection: 2
+  13:
+    display-name: "<dark_red>Netherite Sword"
+    weapon:
+      material: NETHERITE_SWORD
+      slot: 0
+      enchantments:
+        sharpness: 3
+    extras: []
+    armor:
+      helmet:
+        material: NETHERITE_HELMET
+        enchantments:
+          protection: 3
+      chestplate:
+        material: NETHERITE_CHESTPLATE
+        enchantments:
+          protection: 3
+      leggings:
+        material: NETHERITE_LEGGINGS
+        enchantments:
+          protection: 3
+      boots:
+        material: NETHERITE_BOOTS
+        enchantments:
+          protection: 3
+  14:
+    display-name: "<dark_red>Netherite Axe"
+    weapon:
+      material: NETHERITE_AXE
+      slot: 0
+      enchantments:
+        sharpness: 4
+    extras: []
+    armor:
+      helmet:
+        material: NETHERITE_HELMET
+        enchantments:
+          protection: 4
+      chestplate:
+        material: NETHERITE_CHESTPLATE
+        enchantments:
+          protection: 4
+      leggings:
+        material: NETHERITE_LEGGINGS
+        enchantments:
+          protection: 4
+      boots:
+        material: NETHERITE_BOOTS
+        enchantments:
+          protection: 4
+  15:
+    display-name: "<red>Trident"
+    weapon:
+      material: TRIDENT
+      slot: 0
+      enchantments:
+        sharpness: 3
+    extras: []
+    armor:
+      helmet:
+        material: DIAMOND_HELMET
+        enchantments:
+          protection: 1
+      chestplate:
+        material: DIAMOND_CHESTPLATE
+        enchantments:
+          protection: 1
+      leggings:
+        material: DIAMOND_LEGGINGS
+        enchantments:
+          protection: 1
+      boots:
+        material: DIAMOND_BOOTS
+        enchantments:
+          protection: 1
+  16:
+    # FINAL LEVEL — Humiliation round!
+    # No armor, weakest weapon. Get a kill here to win the game.
+    display-name: "<dark_gray>Wooden Hoe"
+    weapon:
+      material: WOODEN_HOE
+      slot: 0
+    extras: []
+    armor: {}

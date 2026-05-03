@@ -1,0 +1,65 @@
+# TierPvP - Messages (English)
+#
+# All messages use MiniMessage formatting.
+# Docs: https://docs.advntr.dev/minimessage/format.html
+
+prefix: "<gray>[<gold>TierPvP</gold>]</gray>"
+
+join: "<green><player></green> <gray>joined! (<count> players)"
+leave: "<red><player></red> <gray>left! (<count> players)"
+
+spawn-protection: "<green>🛡 Safe Zone"
+combat-tagged: "<red>⚔ In Combat — <seconds>s"
+no-permission: "<red>You don't have permission to do that."
+reload: "<green>Configuration reloaded!"
+force-start: "<yellow>Game forcefully rotated!"
+
+level-up:
+  title: "<green>⬆ Level <level>"
+  subtitle: "<weapon>"
+  message: "<green>⬆</green> You advanced to <gold>Level <level></gold> — <weapon>!"
+  kill-streak-message: "<gold>🔥</gold> <yellow><player></yellow> <gold>is on a <streak> kill streak!"
+
+death:
+  kill-message: "<green><killer></green> killed <red><victim></red> <gray>with <weapon>"
+  demotion-message: "<red>☠</red> Demoted to <gold>Level <level></gold> — <weapon>!"
+  fell-in-water: "<red><player></red> <gray>drowned!"
+  fell-in-void: "<red><player></red> <gray>fell into the void!"
+  pushed-in-water: "<green><killer></green> pushed <red><victim></red> <gray>into the water!"
+  pushed-in-void: "<green><killer></green> pushed <red><victim></red> <gray>into the void!"
+
+win:
+  title: "<gold>🏆 Victory!"
+  subtitle: "<yellow><winner> <gold>won the game!"
+  message: "<gold>★</gold> <yellow><winner></yellow> <gold>won the game!</gold>"
+  celebration-message: "<gold>Game over! Next arena in <seconds>s..."
+
+arena:
+  switch: "<aqua>Switching to <arena>...</aqua>"
+
+  created: "<green>Arena <arena> created!"
+  deleted: "<red>Arena <arena> deleted!"
+  spawn-set: "<green>Spawn set for arena <arena>!"
+
+  # Selection Tool Messages
+  selection-tool: "<yellow>Left-click to set pos1, right-click to set pos2. Use <gold>/tierpvp arena confirmzone</gold> to save."
+  selection-pos1: "<green>Position 1 set!"
+  selection-pos2: "<green>Position 2 set!"
+  selection-confirmation: "<green>Spawn zone saved for arena <arena>!"
+  selection-cancellation: "<red>Zone selection cancelled."
+  void-confirmation: "<green>Void Y-level set to <y> for arena <arena>!"
+
+  # Error Message
+  not-found: "<red>Arena <arena> not found."
+  exists: "<red>Arena <arena> already exists."
+  incomplete: "<red>Arena <arena> is incomplete. Set spawn, zone, and void level."
+  no-arenas: "<red>No arenas are configured."
+
+stats:
+  header: "<gold>Stats for <player>:"
+  kills: "<gray>Kills: <white><kills>"
+  deaths: "<gray>Deaths: <white><deaths>"
+  wins: "<gray>Wins: <white><wins>"
+  games: "<gray>Games Played: <white><games>"
+  highest: "<gray>Highest Level: <white><level>"
+  not-found: "<red>No stats found for <player>."
