@@ -19,10 +19,19 @@ public class MessageUtil {
     public void load(File file) {
         templates.clear();
         YamlConfiguration yaml = YamlConfiguration.loadConfiguration(file);
-        for (String key : yaml.getKeys(false)) {
-            templates.put(key, yaml.getString(key, ""));
-        }
+        loadKeys(yaml, "");
         prefix = templates.getOrDefault("prefix", "");
+    }
+
+    private void loadKeys(org.bukkit.configuration.ConfigurationSection section, String parent) {
+        for (String key : section.getKeys(false)) {
+            String fullKey = parent.isEmpty() ? key : parent + "." + key;
+            if (section.isConfigurationSection(key)) {
+                loadKeys(section.getConfigurationSection(key), fullKey);
+            } else {
+                templates.put(fullKey, section.getString(key, ""));
+            }
+        }
     }
 
     public Component format(String key, String... placeholders) {

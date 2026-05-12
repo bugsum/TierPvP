@@ -6,6 +6,8 @@ prefix: TierPvP
 authors: [ Samarth Sharma ]
 description: A fast-paced minigame plugin
 
+softdepend: ["PlaceholderAPI"]
+
 commands:
   tierpvp:
     description: TierPvP main command

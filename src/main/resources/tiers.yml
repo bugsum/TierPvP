@@ -281,6 +281,7 @@ levels:
       slot: 0
       enchantments:
         sharpness: 3
+        loyalty: 3
     extras: []
     armor:
       helmet:

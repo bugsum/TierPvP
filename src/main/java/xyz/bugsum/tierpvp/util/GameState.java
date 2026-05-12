@@ -1,4 +1,6 @@
 package xyz.bugsum.tierpvp.util;
 
-public class GameState {
+public enum GameState {
+    ACTIVE,
+    CELEBRATING
 }

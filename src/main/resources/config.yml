@@ -19,8 +19,6 @@ game:
   celebration-seconds: 5
   # If spawn protection must be enabled
   spawn-protection: true
-  # Whether touching water blocks instantly kills players
-  water-kills: true
 
 # Team mode settings
 # NOTE: only applies when game.mode is TEAMS

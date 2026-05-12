@@ -40,7 +40,7 @@ public class CombatManager {
             return false;
         }
 
-        return false;
+        return true;
     }
 
     public Optional<UUID> getTagger(UUID player) {
